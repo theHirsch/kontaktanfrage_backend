@@ -1,8 +1,9 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
 const db = require("./app/models");
-db.sequelize.sync();
+//db.sequelize.sync();
 db.sequelize.sync({ force: true }).then(() => {
     console.log("Drop and re-sync db.");
   });
@@ -19,6 +20,7 @@ app.get("/", (req, res) => {
   res.json({ message: "Welcome to Max' App" });
 });
 // set port, listen for requests on 8080, not 3000
+require("./app/routes/test.routes");
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);

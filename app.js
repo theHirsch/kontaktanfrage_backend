@@ -1,9 +1,9 @@
 // Import the sequelize object on which
 // we have defined model.
-const sequelize = require('./app/db/database')
+const sequelize = require('./app/db/database.js')
 
 // Import the user model we have defined
-const User = require('./app/models/user')
+/* const User = require('./app/models/user') */
 
 // Create all the table defined using 
 // sequelize in Database
