@@ -1,4 +1,3 @@
-/*
 // Include Sequelize module.
 const Sequelize = require('sequelize')
   
@@ -48,4 +47,4 @@ const User = sequelize.define('user', {
 // Exporting User, using this constant
 // we can perform CRUD operations on
 // 'user' table.
-module.exports = User */
+module.exports = User

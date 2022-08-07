@@ -9,7 +9,7 @@ module.exports = {
     development: {
       HOST: "localhost",
       USER: "postgres",
-      PASSWORD: "123",
+      PASSWORD: "MadMax12",
       DB: "testdb",
       dialect: 'postgres',
       use_env_variable: 'DATABASE_URL'
