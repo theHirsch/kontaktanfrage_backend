@@ -1,11 +1,14 @@
 module.exports = (sequelize, Sequelize) => {
     const Test = sequelize.define("test", {
-      telefonnummer: {
+      Telefonnummer: {
         type: Sequelize.STRING
       },
-      wunschzeiten: {
+      Wunschzeiten: {
         type: Sequelize.STRING
       },
+      published: {
+        type: Sequelize.BOOLEAN
+      }
     });
     return Test;
   };

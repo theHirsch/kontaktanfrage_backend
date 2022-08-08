@@ -3,10 +3,7 @@
 const sequelize = require('./app/db/database.js')
 
 // Import the user model we have defined
-/* const User = require('./app/models/user') */
-
-// Create all the table defined using 
-// sequelize in Database
+// const User = require('./app/models/user')
 
 // Sync all models that are not
 // already in the database
