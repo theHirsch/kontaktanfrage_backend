@@ -19,6 +19,9 @@ app.use(cors(corsOptions));
 app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 // simple test txt
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to Max' App" });
