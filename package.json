@@ -1,7 +1,7 @@
 {
   "name": "david_aufgabe_3",
   "version": "1.0.0",
-  "description": "Prüfungsaufgabe WebDevelopment2 bei Prof. David Linner",
+  "description": "Backend vom Kontaktanfragenformular",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
