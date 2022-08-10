@@ -4,16 +4,16 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Test
 exports.create = (req, res) => {
     // Validate request
-    if (!req.body.title) {
+    if (!req.body.Telefonnummer) {
       res.status(400).send({
-        message: "Content can not be empty!"
+        message: "Content can not be empty, enter a Telefonnummer!"
       });
       return;
     }
     // Create a Test
     const test = {
-      title: req.body.title,
-      description: req.body.description,
+      Telefonnummer: req.body.Telefonnummer,
+      Wunschzeiten: req.body.Wunschzeiten,
       published: req.body.published ? req.body.published : false
     };
     // Save Test in the database

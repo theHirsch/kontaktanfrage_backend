@@ -24,7 +24,9 @@ app.use(bodyParser.json());
 
 // simple test txt
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to Max' App" });
+  console.log('TEXT in console when working');
+//  res.json({ message: "Welcome to Max' App" });
+    res.send('Hello to max App');
 });
 
 app.post("/testdb", async(req, res) => {
