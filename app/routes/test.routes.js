@@ -17,4 +17,6 @@ module.exports = app => {
     // Create a new Test
     router.delete("/", tests.deleteAll);
     app.use('/api/tests', router);
+
+    router.get("/admin",  );
   };

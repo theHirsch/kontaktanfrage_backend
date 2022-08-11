@@ -5,9 +5,6 @@ module.exports = (sequelize, Sequelize) => {
       },
       Wunschzeiten: {
         type: Sequelize.STRING
-      },
-      published: {
-        type: Sequelize.BOOLEAN
       }
     });
     return Test;
