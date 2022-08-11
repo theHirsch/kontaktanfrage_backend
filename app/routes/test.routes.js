@@ -13,9 +13,9 @@ module.exports = app => {
     // Update a Test with id
     router.put("/:id", tests.update);
     // Delete a Test with id
-    router.delete("/:id", tests.delete);
+    router.delete("/delete/:id", tests.delete);
     // Create a new Test
-    router.delete("/", tests.deleteAll);
+    router.delete("/delete-all", tests.deleteAll);
     app.use('/api/tests', router);
 
     router.get("/admin",  );
