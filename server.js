@@ -25,10 +25,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// Test txt output in console and 'Hello to max App' on localhost:8080
+// Test txt output in console and 'Willkommen zu Max App / Welcome to max App' on localhost:8080
 app.get("/", (req, res) => {
   console.log('TEXT in console when working');
-    res.send('Hello to max App');
+    res.send('Willkommen zu Max App / Welcome to max App');
 });
 
 // The created Database is called "testdb"
