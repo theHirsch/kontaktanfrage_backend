@@ -1,3 +1,4 @@
+// With the config defaults used, Sequelize will create a column with the model we determined
 const fs = require('fs');
 const dbConfig = require("../config/db.config.js");
 const Sequelize = require("sequelize");

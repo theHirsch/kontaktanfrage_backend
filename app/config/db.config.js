@@ -1,3 +1,4 @@
+// Config with the default data of the database is used by Sequelize
 require('dotenv').config()
 
 module.exports = {

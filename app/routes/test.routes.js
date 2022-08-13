@@ -1,3 +1,5 @@
+// Routes for the requests (also for testing in postman)
+// Controller "What to do with a request" are required
 module.exports = app => {
 
     const tests = require("../controllers/test.controller.js");

@@ -4,7 +4,8 @@ const cors = require("cors");
 const app = express();
 const db = require("./app/models");
 const models = require("./app/models");
-// db.sequelize.sync();
+
+// Sequelize is always dropping and creating a new, fresh database when the backend is started again
 db.sequelize.sync({ force: true }).then(() => {
     console.log("Drop and re-sync db.");
     if (true) {
@@ -15,20 +16,22 @@ var corsOptions = {
   origin: true, credentials: true
 };
 app.use(cors(corsOptions));
-// to get json data
+
+// Enable getting json data
 app.use(express.json());
-// parse requests of content-type - application/x-www-form-urlencoded
+
+// Parse requests of content-type, we are using json
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-// simple test txt
+// Test txt output in console and 'Hello to max App' on localhost:8080
 app.get("/", (req, res) => {
   console.log('TEXT in console when working');
-//  res.json({ message: "Welcome to Max' App" });
     res.send('Hello to max App');
 });
 
+// The created Database is called "testdb"
 app.post("/testdb", async(req, res) => {
   try {
     console.log(req.body);
@@ -36,20 +39,20 @@ app.post("/testdb", async(req, res) => {
     console.error(err.message);
   }
 })
-// set port, listen for requests on 8080, not 3000 like my standard!
+// Set port, listen for requests on 8080
 require("./app/routes/test.routes")(app);
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-// seed with 'id', 'Telefonnummer' and 'Wunschzeiten' (also includes 'created at' and 'updated at')
+// Seed with 'id', 'Telefonnummer' and 'Wunschzeiten' (also includes 'created at' and 'updated at' automatically) to see if the db is working properly
 const createTestWithAnfrage = async() => {
   await models.tests.create(
   {
     id: '1',
     Telefonnummer: '0176321123',
-    Wunschzeiten: '08:00 - 10:00',
+    Wunschzeiten: 'Mo08:00-10:00',
   }
     );
 };
